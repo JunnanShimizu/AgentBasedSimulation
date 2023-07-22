@@ -12,24 +12,24 @@ public class Landscape {
     private int height;
     private LinkedList<Agent> agents;
 
-    //a constructor that sets the width and height fields, and initializes the agent list.
+    // a constructor that sets the width and height fields, and initializes the agent list.
     public Landscape(int w, int h) {
         this.width = w;
         this.height = h;
         this.agents = new LinkedList<Agent>();
     }
 
-    //returns the height.
+    // returns the height.
     public int getHeight() {
         return height;
     }
 
-    //returns the width.
+    // returns the width.
     public int getWidth() {
         return width;
     }
 
-    //inserts an agent at the beginning of its list of agents.
+    // inserts an agent at the beginning of its list of agents.
     public void addAgent( Agent a ) {
         agents.addFirst(a);
     }
@@ -44,7 +44,7 @@ public class Landscape {
         return result;
     }
 
-    //returns a list of the Agents within radius distance of the location x0, y0.
+    // returns a list of the Agents within radius distance of the location x0, y0.
     public ArrayList<Agent> getNeighbors(double x0, double y0, double radius) {
         ArrayList<Agent> neighbors = new ArrayList<Agent>();
         for(Agent current : agents.toArrayList()){
@@ -57,7 +57,7 @@ public class Landscape {
         return neighbors;
     }
 
-    //Calls the draw method of all the agents on the Landscape.
+    // Calls the draw method of all the agents on the Landscape.
     public void draw(Graphics g) {
         for(Agent current : agents.toArrayList()){
             current.draw(g);

@@ -15,12 +15,12 @@ public class SocialAgent extends Agent {
         this.radius = radius;
     }
 
-    //sets the cell's radius of sensitivity to the value of radius.
+    // sets the cell's radius of sensitivity to the value of radius.
     public void setRadius(int radius){
         this.radius = radius;
     }
 
-    //returns the cell's radius of sensitivity.
+    // returns the cell's radius of sensitivity.
     public int getRadius() {
         return this.radius;
     }

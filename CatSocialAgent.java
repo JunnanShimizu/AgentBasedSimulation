@@ -15,12 +15,12 @@ public class CatSocialAgent extends SocialAgent {
         this.category = cat;
     }
 
-    //returns the category value.
+    // returns the category value.
     public int getCategory() {
         return this.category;
     }
 
-    //returns a single character string indicating the category.
+    // returns a single character string indicating the category.
     public String toString() {
         return "" + this.category;
     }

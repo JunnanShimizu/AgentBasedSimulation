@@ -9,23 +9,23 @@ public class LinkedList <T>{
         private Node next;
         T t;
 
-        //a constructor that initializes next to null and the container field to item.
+        // a constructor that initializes next to null and the container field to item.
         public Node(T item) {
             this.next = null;
             t = item;
         }
 
-        //returns the value of the container field.
+        // returns the value of the container field.
         public T getThing() {
             return this.t;
         }
 
-        //sets next to the given node.
+        // sets next to the given node.
         public void setNext(Node n){
             this.next = n;
         }
 
-        //returns the next field.
+        // returns the next field.
         public Node<T> getNext() {
             return next;
         }
@@ -35,12 +35,12 @@ public class LinkedList <T>{
         private Node<T> head;
         private Node<T> next;
 
-        //the constructor for the LLIterator given the head of a list.
+        // the constructor for the LLIterator given the head of a list.
         public LLIterator(Node head) {
             next = head;
         }
 
-        //returns true if there are still values to traverse (if the current node reference is not null).
+        // returns true if there are still values to traverse (if the current node reference is not null).
         public boolean hasNext() {
             if(next != null){
                 return true;
@@ -59,7 +59,7 @@ public class LinkedList <T>{
             return temp;
         }
 
-        //does nothing. Implementing this function is optional for an Iterator.
+        // does nothing. Implementing this function is optional for an Iterator.
         public void remove() {
         }
 
@@ -72,31 +72,31 @@ public class LinkedList <T>{
     private Node<T> head;
     private int size;
 
-    //constructor that initializes the fields so it is an empty list.
+    // constructor that initializes the fields so it is an empty list.
     public LinkedList() {
         this.size = 0;
         this.head = null;
     }
 
-    //empties the list (resets the fields so it is an empty list).
+    // empties the list (resets the fields so it is an empty list).
     public void clear() {
         this.head = null;
         this.size = 0;
     }
 
-    //returns the size of the list.
+    // returns the size of the list.
     public int size() {
         return this.size;
     }
 
-    //inserts the item at the beginning of the list.
+    // inserts the item at the beginning of the list.
     public void addFirst(T item) {
         Node<T> newNode = new Node<T>(item);
         newNode.setNext(head);
         head = newNode;
     }
 
-    //appends the item at the end of the list.
+    // appends the item at the end of the list.
     public void addLast(T item) {
 //        LLIterator iterator = new LLIterator(this.head);
 //        Node<T> oldNode = new Node<T>(item);
@@ -123,7 +123,7 @@ public class LinkedList <T>{
         }
     }
 
-    //inserts the item at the specified position in the list.
+    // inserts the item at the specified position in the list.
     public void add(int index, T item) {
         Node<T> newNode = new Node<T>(item);
         Node<T> temp = this.head;
@@ -140,7 +140,7 @@ public class LinkedList <T>{
         this.size++;
     }
 
-    //removes the item at the specified position in the list.
+    // removes the item at the specified position in the list.
     public T remove (int index) {
         LLIterator iterator = new LLIterator(this.head);
 
@@ -185,7 +185,7 @@ public class LinkedList <T>{
         return null;
     }
 
-    //returns an ArrayList of the list contents in order.
+    // returns an ArrayList of the list contents in order.
     public ArrayList<T> toArrayList() {
         LLIterator iterator = new LLIterator(this.head);
         ArrayList<T> list = new ArrayList<T>();
@@ -196,7 +196,7 @@ public class LinkedList <T>{
         return list;
     }
 
-    //returns an ArrayList of the list contents in shuffled order.
+    // returns an ArrayList of the list contents in shuffled order.
     public ArrayList<T> toShuffledList(){
         ArrayList<T> list = this.toArrayList();
         Collections.shuffle(list);
