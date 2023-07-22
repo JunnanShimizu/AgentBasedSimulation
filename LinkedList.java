@@ -1,8 +1,4 @@
-/**
- * File: SocialAgent.java
- * Author: Junnan Shimizu
- * Date: 10/23/2021
- */
+
 
 import java.util.ArrayList;
 import java.util.Collections;
